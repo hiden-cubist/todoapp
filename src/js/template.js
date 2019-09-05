@@ -6,8 +6,8 @@ export class Template {
     itemList(items) {
         return items.reduce((accumulator, currentValue) =>
             `${accumulator}
-            <li id="${currentValue.id}">
-                <label>
+            <li class="list-group-item" id="${currentValue.id}">
+                <label class="align-middle my-0">
                     <input class="toggle" type="checkbox" ${currentValue.completed ? 'checked' : ''}>
                     <span class="toggle-icon"></span>
                     ${this.escapeSpecialChars(currentValue.title)}
