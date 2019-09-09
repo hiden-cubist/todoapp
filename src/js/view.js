@@ -37,7 +37,7 @@ export class View {
     bindToggleItem(handler) {
         this.todoList.addEventListener('click', event => {
             if (event.target.className === 'toggle') {
-                handler(parseInt(event.target.parentNode.id));
+                handler(parseInt(event.target.parentNode.parentNode.id));
             }
         });
     }
